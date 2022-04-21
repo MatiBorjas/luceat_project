@@ -1,18 +1,19 @@
 import CartWidget from "../CartWidget/CartWidget";
+import './NavBar.css'
 
 const NavBar = () => {
     return (
 
-        
-    <div>
+    <header className='contenedor-navbar'>
         <h3>LUCEAT</h3>
-        <li>Inicio</li>
-        <li>Productos</li>
-        <li>Conocenos</li>
-        <li>Contacto</li>
-        <CartWidget/>
-    </div>
-    
+        <ul className='navbar-botones'>
+            <li>Inicio</li>
+            <li>Productos</li>
+            <li>Conocenos</li>
+            <li>Contacto</li>
+            <CartWidget/>
+        </ul>
+    </header>
     );
 }
 

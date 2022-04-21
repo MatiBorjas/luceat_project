@@ -1,0 +1,23 @@
+.contenedor-navbar {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: rgb(255, 226, 182);
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-bottom: 2px solid rgb(255, 179, 79);
+}
+
+
+
+.navbar-botones {
+  display: flex;
+  flex-flow:  nowrap;
+  list-style: none;
+  
+}
+
+li {
+  margin: 0px 20px;
+  font-family: 'Raleway', sans-serif;
+}
