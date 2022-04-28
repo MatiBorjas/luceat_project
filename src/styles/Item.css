@@ -1,0 +1,39 @@
+.card {
+  width: 200px;
+  height: 220px;
+  background-color: rgb(255, 233, 215) ;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: end;
+  border: 3px solid rgb(255, 179, 128);
+  border-radius: 15px;
+  margin-top: 15px;
+  /* padding: 10px; */
+  font-size: 19px;
+  font-weight: 100;
+  -webkit-box-shadow: 5px 5px 11px 3px rgba(110, 31, 0, 0.315); 
+  box-shadow: 5px 5px 11px 3px rgba(110, 31, 0, 0.315);
+  margin: 25px 10px;
+}
+
+.card-gradient {
+  width: 195px;
+  background: #A4A4A4;
+  border-radius: 10px;
+background: -moz-linear-gradient(top, #A4A4A4 0%, #CB6262 81%, #CB6262 100%);
+background: -webkit-linear-gradient(top, #A4A4A4 0%, #CB6262 81%, #CB6262 100%);
+background: linear-gradient(to bottom, #a4a4a400 0%, #dda365 45%, #ecaf6d 100%);
+}
+
+.text {
+  height: 95px;
+  padding: 0 15px;
+  padding-bottom: 10px;
+  
+}
+
+.titulo {
+  color:rgb(35, 61, 24);
+  font-size: 22px;
+  font-weight: 500;
+}

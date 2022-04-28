@@ -1,17 +1,16 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
 
   return (
     <>
     <NavBar/>
-    <ItemListContainer name='Juan Carlos'/>
-
+    <ItemListContainer />
     </>
-  
   );
 }
 
 export default App;
+
