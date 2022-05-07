@@ -1,6 +1,6 @@
 .card {
-  width: 200px;
-  height: 220px;
+  width: 400px;
+  height: 500px;
   background-color: rgb(255, 233, 215) ;
   display: flex;
   flex-flow: nowrap column;
@@ -8,32 +8,44 @@
   border: 3px solid rgb(255, 179, 128);
   border-radius: 15px;
   margin-top: 15px;
-  /* padding: 10px; */
+  position: relative;
   font-size: 19px;
   font-weight: 100;
   -webkit-box-shadow: 5px 5px 11px 3px rgba(110, 31, 0, 0.315); 
   box-shadow: 5px 5px 11px 3px rgba(110, 31, 0, 0.315);
   margin: 25px 10px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+
 }
 
-.card-gradient {
-  width: 195px;
-  background: #A4A4A4;
-  border-radius: 10px;
-background: -moz-linear-gradient(top, #A4A4A4 0%, #CB6262 81%, #CB6262 100%);
-background: -webkit-linear-gradient(top, #A4A4A4 0%, #CB6262 81%, #CB6262 100%);
-background: linear-gradient(to bottom, #a4a4a400 0%, #dda365 45%, #ecaf6d 100%);
+.card:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.card-image{
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  bottom: 25px;
+}
+
+
+.titulo {
+  color:rgb(194, 231, 145);
+  font-size: 40px;
+  font-weight: 500;
+  padding-top: 20px;
+  text-shadow: 2px 2px 3px rgb(83, 38, 0);
 }
 
 .text {
-  height: 95px;
+  color: rgb(83, 38, 0);
+  height: 25%;
+  width: 100%;
   padding: 0 15px;
-  padding-bottom: 10px;
-  
-}
-
-.titulo {
-  color:rgb(35, 61, 24);
-  font-size: 22px;
-  font-weight: 500;
+  position: absolute;
+  background: rgba(255, 182, 92, 0);
+  background: linear-gradient(0deg, rgba(255, 179, 128,1) 0%, rgb(231, 185, 129) 35%, rgba(255, 242, 226, 0) 100%);
 }

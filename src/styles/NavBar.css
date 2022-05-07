@@ -7,13 +7,21 @@
   padding: 20px 10px;
 }
 
-
-
 .navbar-botones {
   display: flex;
   flex-flow:  nowrap;
   list-style: none;
   
+}
+
+.brand {
+  text-decoration: none;
+  color: rgb(83, 38, 0);
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(83, 38, 0);
 }
 
 li {
