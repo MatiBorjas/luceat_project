@@ -21,7 +21,7 @@ function ItemListContainer() {
         return setProductos(result)
       
     } else {
-      setProductos(productos.filter(p => p.categoria == categoryId))
+      setProductos(result.filter(p => p.categoria == categoryId))
     }
   })
 
