@@ -9,9 +9,12 @@ const NavBar = () => {
         <h3><Link to='/' className='brand'>LUCEAT</Link></h3>
         <ul className='navbar-botones'>
             <li className='link'>Inicio</li>
-            <li ><Link to='/productos' className='link'>Productos</Link></li>
-            <li className='link'>Conocenos</li>
-            <li className='link'>Contacto</li>
+            <li><Link to={'/productos'} className='link'>Productos</Link></li>
+            <li><Link to={'/categoria/difusores'} className='link'>Difusores</Link></li>
+            <li><Link to={'/categoria/bodySplash'} className='link'>Body Splash</Link></li>
+            <li><Link to={'/categoria/escencias'} className='link'>Escencias</Link></li>
+            <li><Link to={'/categoria/velas'} className='link'>Velas</Link></li>
+            <li><Link to={'/categoria/sahumerios'} className='link'>Sahumerios</Link></li>
             <CartWidget/>
         </ul>
     </header>

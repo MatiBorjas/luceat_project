@@ -6,7 +6,6 @@ import { ItemDetail } from './ItemDetail'
 function ItemListDetailContainer() {
 
   const {itemId} = useParams()
-  
   const [detail, setdetail] = useState({})
 
   useEffect(() => {
@@ -23,7 +22,9 @@ function ItemListDetailContainer() {
 
 
   return (
+    <>
     <ItemDetail detalles={detail}/>
+    </>
   )
 }
 
