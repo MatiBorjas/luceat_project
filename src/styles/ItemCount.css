@@ -1,0 +1,35 @@
+.contenedorCount {
+  background-color: rgb(255, 202, 166);
+  border-radius: 6px;
+  width: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.contenedorCount button {
+  background-color: rgb(255, 174, 120);
+  border: 2px solid rgb(83, 38, 0);
+  border-radius: 8px;
+  width: 25px;
+  height: 25px;
+}
+
+.contenedorCount span{
+  margin: 0 15px;
+}
+
+.botonAgregar {
+  width: 100%;
+  padding: 0 5px;
+}
+
+.botonAgregar button {
+  width: 100%;
+  margin-top: 10px;
+  border: 2px solid rgb(83, 38, 0);
+  border-radius: 8px;
+}
+

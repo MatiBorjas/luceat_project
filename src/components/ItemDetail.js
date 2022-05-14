@@ -1,7 +1,15 @@
+import { useState } from 'react';
 import '../styles/ItemDetail.css';
+import ItemCount from './ItemCount';
 
 export function ItemDetail({ detalles }) {
 
+  const [terminar, setTerminar] = useState(false)
+  
+  const onAdd = (count) => {
+    setTerminar(true)
+    console.log(count)
+  }
 
   return (
     <div className='contenedor-item'>
@@ -13,6 +21,13 @@ export function ItemDetail({ detalles }) {
         </div>
         <div className='descripcion'>
           <div className='texto'>{detalles.descripcion}</div>
+        </div>
+        <div className='contenedorCompra'>
+          {terminar ? (
+            <button className='terminarCompra'>Terminar compra</button>
+            ) : 
+          <ItemCount stock={detalles.stock} onAdd={onAdd} id={detalles.id}/>
+          }
         </div>
       </div>
     </div>

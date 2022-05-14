@@ -5,8 +5,8 @@ import { ItemDetail } from './ItemDetail'
 
 function ItemListDetailContainer() {
 
-  const {itemId} = useParams()
   const [detail, setdetail] = useState({})
+  const {itemId} = useParams()
 
   useEffect(() => {
     const getDetail = new Promise((resolve, reject) => {
