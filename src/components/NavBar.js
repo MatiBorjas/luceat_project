@@ -11,7 +11,7 @@ const NavBar = () => {
             <li className='link'>Inicio</li>
             <li><Link to={'/productos'} className='link'>Productos</Link></li>
             <li><Link to={'/categoria/difusores'} className='link'>Difusores</Link></li>
-            <li><Link to={'/categoria/bodySplash'} className='link'>Body Splash</Link></li>
+            <li><Link to={'/categoria/aguas'} className='link'>Body Splash</Link></li>
             <li><Link to={'/categoria/escencias'} className='link'>Escencias</Link></li>
             <li><Link to={'/categoria/velas'} className='link'>Velas</Link></li>
             <li><Link to={'/categoria/sahumerios'} className='link'>Sahumerios</Link></li>

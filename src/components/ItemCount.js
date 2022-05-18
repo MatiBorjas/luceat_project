@@ -3,35 +3,36 @@ import { useAppContext } from '../context/AppContext'
 import { useCartContext } from '../context/CartContext'
 import '../styles/ItemCount.css'
 
-function ItemCount({stock, onAdd, id}) {
-  const [count, setCount] = useState(0)
+function ItemCount({initial, stock, onAdd}) {
+  const [count, setCount] = useState(initial);
 
-  const { addToCart } = useCartContext()
-  const { productos } = useAppContext()
+  // const { addToCart } = useCartContext()
+  // const { productos } = useAppContext()
+
+  const handleRemove = () => {
+    if(count > 1) {
+      setCount(count => count - 1)
+    }
+  }
 
   const handleAdd = () => {
     if(count < stock) {
-      setCount(count + 1)
+      setCount(count => count + 1)
     }
   }
 
-  const handleRemove = () => {
-    if(count > 0) {
-      setCount(count - 1)
-    }
-  }
+  // const handleClick = (id, cantidad) => {
 
-  const handleClick = (id, cantidad) => {
+  //   const findProduct = productos.find((producto) => producto.id == id)
 
-    const findProduct = productos.find((producto) => producto.id == id)
-
-    if(!findProduct){
-      alert('No existe ese producto')
-      return
-    }
-    addToCart(findProduct, cantidad)
-    onAdd(count)
-  }
+  //   if(!findProduct){
+  //     alert('No existe ese producto')
+  //     return
+  //   }
+    
+  //   addToCart(findProduct, cantidad)
+  //   onAdd(count)
+  // }
 
   return (
 
@@ -52,7 +53,7 @@ function ItemCount({stock, onAdd, id}) {
         <div className='botonAgregar'>
         <button 
           className='agregarAlCarrito'
-          onClick={() => handleClick(id, count)}>
+          onClick={() => onAdd(count)}>
             Agregar
           </button>
         </div>

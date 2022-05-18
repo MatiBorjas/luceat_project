@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext()
+
 export const useCartContext = () => useContext(CartContext)
 
 const CartContextProvider = ({ children }) => {
@@ -8,21 +9,35 @@ const CartContextProvider = ({ children }) => {
 
   const isInCart = (id) => cart.find(prod => prod.id === id)
 
-  const addToCart = (producto, cantidad) => {
-    const newCart = [...cart]
+  function addToCart (item, quantity) {
+    console.log({item, quantity});
 
-    const productoEnCart = isInCart(producto.id)
-
-    if(productoEnCart){
-      newCart[newCart.findIndex(prod => producto.id == productoEnCart.id)].quantity += cantidad
-
-      setCart(newCart)
-      return
+    if(isInCart(item.id)){
+      return setCart(
+        cart.map((product) => product.id === item.id ?
+        {...product, quantity: product.quantity + quantity}
+        : product
+      )
+    )
     }
-
-    producto.cantidad = cantidad
-    setCart([...newCart, producto])
+    setCart([...cart, {...item, quantity }]);
   }
+
+  // const addToCart = (producto, cantidad) => {
+  //   const newCart = [...cart]
+
+  //   const productoEnCart = isInCart(producto.id)
+
+  //   if(productoEnCart){
+  //     newCart[newCart.findIndex(prod => producto.id === productoEnCart.id)].quantity += cantidad
+
+  //     setCart(newCart)
+  //     return
+  //   }
+
+  //   producto.cantidad = cantidad
+  //   setCart([...newCart, producto])
+  // }
 
   const deleteFromCart = (producto) => {
     const newCart = [...cart]
@@ -33,14 +48,15 @@ const CartContextProvider = ({ children }) => {
       return
     }
 
-    const deleteProduct = newCart.filter((prod) => prod.id != producto.id)
+    const deleteProduct = newCart.filter((prod) => prod.id !== producto.id)
 
     setCart(deleteProduct)
   }
 
-  const deleteCart = () => setCart([])
+  console.log(cart);
 
-  console.log(cart)
+
+  const deleteCart = () => setCart([])
 
   return <CartContext.Provider value={{
     cart,

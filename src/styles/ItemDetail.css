@@ -45,6 +45,8 @@ h1 {
 }
 
 .descripcion {
+  text-align: justify;
   width: 50%;
+  padding: 0px 5px;
   margin-top: 50px;
 }

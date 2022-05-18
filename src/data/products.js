@@ -1,16 +1,16 @@
 export const products = [
   {id: 1,
-  nombre:'Difusor ambiental',
+  nombre:'Difusor alquimico',
   categoria: 'difusores',
   descripcion:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, voluptate harum molestiae doloribus eligendi quasi perferendis fugit quibusdam deserunt repudiandae impedit eum. Dolore ducimus alias temporibus suscipit maxime asperiores dolorem veniam corporis, velit, itaque commodi? Porro distinctio libero adipisci eaque!',
   imagen: require('../img/difusor-ambiental.jpeg'),
-  precio:'1400',
+  precio:'1650',
   stock: 10
   },
 
   {id: 2,
-  nombre:'Body splash',
-  categoria: 'bodySplash',
+  nombre:'Aguas alquimicas',
+  categoria: 'aguas',
   descripcion:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, voluptate harum molestiae doloribus eligendi quasi perferendis fugit quibusdam deserunt repudiandae impedit eum. Dolore ducimus alias temporibus suscipit maxime asperiores dolorem veniam corporis, velit, itaque commodi? Porro distinctio libero adipisci eaque!',
   imagen: require('../img/body-splash-8.jpeg'),
   precio:'1300',
@@ -18,11 +18,11 @@ export const products = [
   },
 
   {id: 3,
-  nombre:'Escencias para hornito',
+  nombre:'Escencias naturales',
   categoria: 'escencias',
   descripcion:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, voluptate harum molestiae doloribus eligendi quasi perferendis fugit quibusdam deserunt repudiandae impedit eum. Dolore ducimus alias temporibus suscipit maxime asperiores dolorem veniam corporis, velit, itaque commodi? Porro distinctio libero adipisci eaque!',
   imagen: require('../img/aceites-de-hornito-3.jpeg'),
-  precio:'500',
+  precio:'700',
   stock: 10
   },
 
