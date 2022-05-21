@@ -1,14 +1,17 @@
 
 import { useCartContext } from '../context/CartContext';
+import React, { useState } from 'react'
 import '../styles/ItemDetail.css';
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom';
 
 export function ItemDetail({ detalles }) {
+  const [terminar, setTerminar] = useState(false)
 
   const { addToCart } = useCartContext();
 
   const handleOnAdd = (count) => {
-    console.log(count);  
+    setTerminar(true)
     addToCart(detalles, count);
   }
 
@@ -24,7 +27,11 @@ export function ItemDetail({ detalles }) {
           <div className='texto'>{detalles.descripcion}</div>
         </div>
         <div className='contenedorCompra'>
+        {terminar ? (
+            <button><Link to={'/carrito'} className='terminarCompra'>Ir al carrito</Link></button>
+            ) :
           <ItemCount initial={1}  stock={detalles.stock} onAdd={handleOnAdd} id={detalles.id}/>
+        }
         </div>
       </div>
     </div>

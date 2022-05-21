@@ -11,6 +11,8 @@
   display: flex;
   flex-flow:  nowrap;
   list-style: none;
+  justify-content: center;
+  align-items: center;
   
 }
 

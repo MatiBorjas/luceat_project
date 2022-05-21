@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
-import { useAppContext } from '../context/AppContext'
-import { useCartContext } from '../context/CartContext'
 import '../styles/ItemCount.css'
 
 function ItemCount({initial, stock, onAdd}) {
   const [count, setCount] = useState(initial);
-
-  // const { addToCart } = useCartContext()
-  // const { productos } = useAppContext()
 
   const handleRemove = () => {
     if(count > 1) {
@@ -20,19 +15,6 @@ function ItemCount({initial, stock, onAdd}) {
       setCount(count => count + 1)
     }
   }
-
-  // const handleClick = (id, cantidad) => {
-
-  //   const findProduct = productos.find((producto) => producto.id == id)
-
-  //   if(!findProduct){
-  //     alert('No existe ese producto')
-  //     return
-  //   }
-    
-  //   addToCart(findProduct, cantidad)
-  //   onAdd(count)
-  // }
 
   return (
 
