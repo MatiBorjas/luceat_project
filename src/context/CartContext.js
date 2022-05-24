@@ -32,18 +32,25 @@ const CartContextProvider = ({ children }) => {
       return
     }
 
-    const deleteProduct = newCart.filter((prod) => prod.id !== producto.id)
+  const deleteProduct = newCart.filter((prod) => prod.id !== producto.id)
 
     setCart(deleteProduct)
   }
 
-  // console.log(cart);
-
 
   const deleteCart = () => setCart([])
 
+  const cantidadCarrito = () =>{
+    let total = 0;
+    cart.forEach((e) => {total += e.quantity});
+    
+    return total
+  }
+
+
   return <CartContext.Provider value={{
     cart,
+    cantidadCarrito,
     addToCart,
     deleteFromCart,
     deleteCart,

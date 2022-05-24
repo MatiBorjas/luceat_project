@@ -15,14 +15,14 @@ function ItemListDetailContainer() {
     const itemsDetail = doc(db, 'items', `${itemId}`);
     getDoc( itemsDetail ).then( snapshot => {
       if(snapshot.exists){
-        setDetail(snapshot.data())
+        const productDetail = {...snapshot.data(), 'id': itemId}
+        setDetail(productDetail)
       }
     })
 
     
   }, [itemId])
 
-  console.log(detail);
 
   return (
     <>
