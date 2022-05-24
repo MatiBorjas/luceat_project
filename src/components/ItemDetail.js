@@ -12,6 +12,7 @@ export function ItemDetail({ detalles }) {
 
   const handleOnAdd = (count) => {
     setTerminar(true)
+    
     addToCart(detalles, count);
   }
 

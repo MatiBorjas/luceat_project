@@ -10,14 +10,6 @@ function ItemListDetailContainer() {
   const {itemId} = useParams()
 
   useEffect(() => {
-    // const getDetail = new Promise((resolve, reject) => {
-    //   setTimeout(() => {
-    //     resolve(products.find(item => item.id == itemId))
-    //   },1000)
-    // })
-    // getDetail.then((result) => {
-    //   setdetail(result)
-    // })
 
     const db = getFirestore();
     const itemsDetail = doc(db, 'items', `${itemId}`);
@@ -26,10 +18,11 @@ function ItemListDetailContainer() {
         setDetail(snapshot.data())
       }
     })
-        // console.log(detail.stock)
+
     
   }, [itemId])
 
+  console.log(detail);
 
   return (
     <>
@@ -37,6 +30,5 @@ function ItemListDetailContainer() {
     </>
   )
 }
-
 
 export default ItemListDetailContainer

@@ -8,21 +8,20 @@ const CartContextProvider = ({ children }) => {
 
   const [cart, setCart] = useState([])  
 
-  const isInCart = (id) => cart.find(prod => prod.id === id)
-
   function addToCart (item, quantity) {
-    console.log({item, quantity});
-
+    
     if(isInCart(item.id)){
       return setCart(
-        cart.map((product) => product.id === item.id ?
-        {...product, quantity: product.quantity + quantity}
-        : product)
-      )
+        cart.map((product) => product.id === item.id 
+        ? { ...product, quantity: product.quantity + quantity }
+        : { product, quantity: quantity }
+        )
+        )
+      }
+      setCart([...cart, {...item, quantity }]);
     }
-    setCart([...cart, {...item, quantity }]);
-  }
-
+    
+  const isInCart = (id) => cart.some(prod => prod.id === id)
 
   const deleteFromCart = (producto) => {
     const newCart = [...cart]
@@ -38,7 +37,7 @@ const CartContextProvider = ({ children }) => {
     setCart(deleteProduct)
   }
 
-  console.log(cart);
+  // console.log(cart);
 
 
   const deleteCart = () => setCart([])

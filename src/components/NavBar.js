@@ -15,7 +15,7 @@ const NavBar = () => {
             <li><Link to={'/categoria/escencias'} className='link'>Escencias</Link></li>
             <li><Link to={'/categoria/velas'} className='link'>Velas</Link></li>
             <li><Link to={'/categoria/sahumerios'} className='link'>Sahumerios</Link></li>
-            <CartWidget />
+            <Link to={'/carrito'}><CartWidget /></Link>
         </ul>
     </header>
     );
