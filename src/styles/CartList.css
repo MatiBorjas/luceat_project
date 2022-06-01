@@ -1,0 +1,26 @@
+.cart-container {
+  margin: 30px 80px;
+  background-color: #FFE9D7;
+  border: solid 2px rgb(255, 179, 128);
+  -webkit-box-shadow: 5px 5px 11px 3px rgba(110, 31, 0, 0.315); 
+  box-shadow: 5px 5px 11px 3px rgba(110, 31, 0, 0.315);
+}
+
+img { 
+  width: 160px;
+}
+
+.carrito {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.item-carrito {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border: solid 2px rgb(255, 179, 128);
+  border-radius: 5px;
+  margin: 20px 20px;
+}
