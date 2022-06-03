@@ -6,13 +6,12 @@ import '../styles/CartWidget.css'
 const CartWidget = () => {
 
   const { cantidadCarrito } = useCartContext();
-  console.log(cantidadCarrito());
 
     return (
       <>
         <div>
           <img src={bagIcon} className='cart-img' />
-          <span>{ cantidadCarrito() }</span>
+          <span className='contador'>{ cantidadCarrito() }</span>
         </div>
       </>
     )

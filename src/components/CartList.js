@@ -9,7 +9,9 @@ function CartList() {
   return (
     <div className='cart-container'>
       {cart.length === 0 ? (
-      <div>El carrito esta vacio</div> )
+      <div className='carrito-vacio'>
+        <p>El carrito esta vacio</p>
+      </div> )
       : ( 
         <div className='carrito-container'>
           <div className='carrito'>
@@ -19,20 +21,24 @@ function CartList() {
                   <div className='img-item'>
                     <img src={item.imagen} alt={item.nombre} />
                   </div>
-                  <div className='item-nombre'>
-                    <p>{item.nombre}</p>
+                  <div className='detalles-item-carrito'>
+                    <div className='item-nombre'>
+                      <p>{item.nombre}</p>
+                    </div>
+                    <div className='item-cantidad'>
+                      <p>Cantidad: {item.quantity}</p>
+                    </div>
+                    <div className='item-precio'>
+                      <p>Precio: {item.precio}</p>
+                    </div>
                   </div>
-                  <div className='item-cantidad'>
-                    <p>Cantidad: {item.quantity}</p>
-                  </div>
-                  <div className='item-precio'>
-                    <p>Precio: {item.precio}</p>
-                  </div>
-                  <div className='item-total'>
-                    <p>Total: ${item.precio * item.quantity}</p>
-                  </div>
-                  <div className='item-eliminar'>
-                    <button className='btn-eliminar' onClick={() => deleteFromCart(item.id)}>Eliminar</button>
+                  <div className='contenedor-item-total'>
+                    <div className='item-total'>
+                      <p>Total: ${item.precio * item.quantity}</p>
+                    </div>
+                    <div className='item-eliminar'>
+                      <button className='btn-eliminar' onClick={() => deleteFromCart(item.id)}>Eliminar</button>
+                    </div>
                   </div>
                 </div>
               )
@@ -47,7 +53,6 @@ function CartList() {
                 <button className='btn-finalizar'>Finalizar Compra</button>
               </div>
             </div>
-
             <div className="vaciar-carrito">
               <div>
                 <button className="btn-vaciar" onClick={() => deleteCart()}>Vaciar Carrito</button>

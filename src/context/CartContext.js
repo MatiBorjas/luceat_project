@@ -22,16 +22,16 @@ const CartContextProvider = ({ children }) => {
     
   const isInCart = (id) => cart.some(prod => prod.id === id)
 
-  const deleteFromCart = (producto) => {
+  const deleteFromCart = (id) => {
     const newCart = [...cart]
 
-    const productoIsInCart = isInCart(producto.id)
+    const productoIsInCart = isInCart(id)
 
     if(!productoIsInCart){
       return
     }
 
-    const deleteProduct = newCart.filter((prod) => prod.id !== producto.id)
+    const deleteProduct = newCart.filter((prod) => prod.id !== id)
       setCart(deleteProduct)
   }
 
