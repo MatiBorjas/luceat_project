@@ -14,15 +14,20 @@
   flex-flow: column nowrap;
 }
 
+.contenedor-detalles {
+  display: flex;
+  flex-flow: column nowrap;
+  border: solid 2px rgb(255, 179, 128);
+  border-radius: 15px;
+  margin: 20px 20px;
+  padding: 2em 0em;
+}
+
 .elementos {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-evenly;
-  border: solid 2px rgb(255, 179, 128);
-  border-radius: 15px;
-  margin: 20px 20px;
-  padding: 2em 0em;
 }
 
 .detalle-titulo {
@@ -50,11 +55,55 @@
 
 .texto {
   font-size: 22px;
+  padding-right: 1em;
 }
 
 .precio {
 text-align: end;
-padding-right: 1em;
+padding-right: 3em;
 font-size: 25px;
 font-weight: 400;
+}
+
+.contenedor-compra {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: center;
+  padding: 5px 5em;
+}
+
+.btn-irAlCarrito {
+  width: 100%;
+  padding: 0 5px;
+}
+
+.contenedor-boton-irAlCarrito {
+    background-color: rgb(255, 202, 166);
+    border: solid 2px rgb(255, 179, 128);
+    border-radius: 15px;
+    width: 180px;
+    height: 4em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+.contenedor-boton-irAlCarrito button {
+  background-color: rgb(255, 174, 120);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  height: 3em;
+  border: 2px solid #FFE9D7;
+  border-radius: 8px;
+}
+
+.terminar-compra {
+  text-decoration: none;
 }
