@@ -12,7 +12,6 @@ export function ItemDetail({ detalles }) {
 
   const handleOnAdd = (count) => {
     setTerminar(true)
-    
     addToCart(detalles, count);
   }
 
@@ -42,12 +41,11 @@ export function ItemDetail({ detalles }) {
                 </div>
               </div>
             ) :
-            <ItemCount initial={1}  stock={detalles.stock} onAdd={handleOnAdd} id={detalles.id}/>
+            <ItemCount initial={1} stock={detalles.stock} onAdd={handleOnAdd} id={detalles.id}/>
           }
           </div>
         </div>
       </div>
-        
     </div>
   )
 }

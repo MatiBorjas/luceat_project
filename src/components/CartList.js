@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useCartContext } from '../context/CartContext'
 import '../styles/CartList.css'
+import FormularioCompra from './FormularioCompra';
 
 function CartList() {
 
   const { cart, totalCarrito, deleteFromCart, deleteCart } = useCartContext();
+
+  const [finalizar, setFinalizar] = useState(false)
+
+  const handleEnd = () => {
+    setFinalizar(true)
+  }
 
   return (
     <div className='cart-container'>
@@ -44,21 +51,25 @@ function CartList() {
               )
             })}
           </div>
+          <div className="vaciar-carrito">
+            <div>
+              <button className="btn-vaciar" onClick={() => deleteCart()}>Vaciar Carrito</button>
+            </div>
+          </div>
 
-            <div className='contenedor-carrito-total'>
-              <div className='total-compra'>
-                <p>Total de compra: ${totalCarrito()}</p>
+            {finalizar ? (
+              <FormularioCompra /> 
+            ) : 
+              <div className='contenedor-carrito-total'>
+                <div className='total-compra'>
+                  <p>Total de compra: ${totalCarrito()}</p>
+                </div>
+                <div className='finalizar-compra'>
+                  <button className='btn-finalizar' onClick={handleEnd}>Finalizar Compra</button>
+                </div>
               </div>
-              <div className='finalizar-compra'>
-                <button className='btn-finalizar'>Finalizar Compra</button>
-              </div>
-            </div>
-            <div className="vaciar-carrito">
-              <div>
-                <button className="btn-vaciar" onClick={() => deleteCart()}>Vaciar Carrito</button>
-              </div>
-            </div>
-        </div>
+            }
+          </div>
       )}
       
     </div>

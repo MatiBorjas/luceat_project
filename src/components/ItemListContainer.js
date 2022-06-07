@@ -12,25 +12,7 @@ function ItemListContainer() {
   const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-  //     const getProducts = new Promise((resolve, reject) => {
-  //       setTimeout(() => {
-  //           resolve(products)
-  //       }, 1000);
-  //   })
-  //   getProducts.then((result) => {
-  //     setLoading(false)
-  //     if (!categoryId) {
-  //       console.log('Promesa cumplida exitosamente', result)
-  //       return setProductos(result)
-  //   } else {
-  //     setProductos(result.filter(p => p.categoria == categoryId))
-  //   }
-  // })
-
-  //   .catch((err) => {
-  //     console.log('Hay habido un error')
-  //   });
-
+  
     const db = getFirestore();
     const itemsCollection = collection(db, 'items');
     getDocs(itemsCollection).then((snapshot) => {
