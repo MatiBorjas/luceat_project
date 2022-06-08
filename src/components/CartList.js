@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext'
 import '../styles/CartList.css'
-import FormularioCompra from './FormularioCompra';
+// import FormularioCompra from './FormularioCompra';
 
 function CartList() {
 
   const { cart, totalCarrito, deleteFromCart, deleteCart } = useCartContext();
 
-  const [finalizar, setFinalizar] = useState(false)
+  // const [finalizar, setFinalizar] = useState(false)
 
-  const handleEnd = () => {
-    setFinalizar(true)
-  }
+  // const handleEnd = () => {
+  //   setFinalizar(true)
+  // }
 
   return (
     <div className='cart-container'>
@@ -57,18 +58,14 @@ function CartList() {
             </div>
           </div>
 
-            {finalizar ? (
-              <FormularioCompra /> 
-            ) : 
               <div className='contenedor-carrito-total'>
                 <div className='total-compra'>
                   <p>Total de compra: ${totalCarrito()}</p>
                 </div>
                 <div className='finalizar-compra'>
-                  <button className='btn-finalizar' onClick={handleEnd}>Finalizar Compra</button>
+                  <button><Link to={'/orden'} className='btn-finalizar'>Finalizar Compra</Link></button>
                 </div>
               </div>
-            }
           </div>
       )}
       

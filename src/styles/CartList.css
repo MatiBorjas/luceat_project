@@ -8,6 +8,8 @@
   margin: 30px 80px;
 }
 
+
+
 .carrito-vacio {
   text-align: center;
   padding: 1em 0;
@@ -34,7 +36,7 @@ img {
   justify-content: space-evenly;
   border: solid 2px rgb(255, 179, 128);
   border-radius: 15px;
-  margin: 20px 20px;
+  margin: 1em 1em;
   padding: 1em 0em;
 }
 
@@ -66,7 +68,7 @@ img {
 }
 
 .contenedor-carrito-total {
-  margin: 0rem 1em;
+  margin: 1em 1em;
   text-align: end;
   background-color: rgb(255, 191, 148);
   border-radius: 5px;
@@ -84,7 +86,8 @@ img {
 }
 
 
-.btn-finalizar {
+.btn-finalizar{
+  text-decoration: none;
   padding: 5px 15px;
   background-color: #FFE9D7;
   border: 2px solid rgb(231, 136, 72);
@@ -96,16 +99,18 @@ img {
 
 .vaciar-carrito {
   text-align: end;
-  padding: 0 8em;
+  padding: 0 3em;
   margin: 5px 0;
   padding-bottom: 1em;
 }
 
 .btn-vaciar {
+  padding: 5px 15px;
   color:rgb(209, 117, 55);
-  border: 0px;
+  border: 2px solid rgb(231, 136, 72);
+  border-radius: 5px;
   background-color: #FFE9D7;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
 }
 
