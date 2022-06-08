@@ -6,7 +6,7 @@ import ItemListDetailContainer from './components/ItemListDetailContainer';
 import CartContextProvider from './context/CartContext';
 import AppContextProvider from './context/AppContext';
 import CartList from './components/CartList';
-import FormularioCompra from './components/FormularioCompra';
+
 
 function App() {
   return (

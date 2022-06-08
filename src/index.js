@@ -6,12 +6,12 @@ import App from './App';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBJ8UXJPAhknMcHpH25Ge3wUSO7GCeG4l4",
-  authDomain: "luceat-react.firebaseapp.com",
-  projectId: "luceat-react",
-  storageBucket: "luceat-react.appspot.com",
-  messagingSenderId: "999912509145",
-  appId: "1:999912509145:web:4351a229afd14dd2ea78c8"
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -27,3 +27,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
+
+
