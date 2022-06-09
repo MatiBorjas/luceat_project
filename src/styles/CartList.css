@@ -7,9 +7,7 @@
   box-shadow: 5px 5px 11px 3px rgba(110, 31, 0, 0.315);
   margin: 30px 80px;
 }
-
-
-
+  
 .carrito-vacio {
   text-align: center;
   padding: 1em 0;
@@ -83,6 +81,7 @@ img {
 
 .finalizar-compra {
   margin-top: 1em;
+  padding-right: 3em;
 }
 
 

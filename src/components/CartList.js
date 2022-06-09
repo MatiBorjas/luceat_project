@@ -63,7 +63,7 @@ function CartList() {
                   <p>Total de compra: ${totalCarrito()}</p>
                 </div>
                 <div className='finalizar-compra'>
-                  <button><Link to={'/orden'} className='btn-finalizar'>Finalizar Compra</Link></button>
+                  <div><Link to={'/orden'} className='btn-finalizar'>Finalizar Compra</Link></div>
                 </div>
               </div>
           </div>
