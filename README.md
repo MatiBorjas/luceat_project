@@ -1,9 +1,11 @@
 
 # LUCEAT Project
 
+Este es mi primer proyecto en ReactJS destinado a generar ordenes de compra para un local.
+
 Este trabajo fue presentado como proyecto final en el curso de ReactJS de Coderhouse
 
-Este es mi primer proyecto en ReactJS destinado a generar ordenes de compra para un local
+
 
 
 ## Información
@@ -20,10 +22,12 @@ Docentes a cargo del curso:
 - NodeJS
 - Sweet Alerts 2
 
-Esta aplicación trabaja con Firebase
+## Servidor
+
+- Firebase
 
 
-## Autor
+## Desarrollador
 
 Matias Borjas
 
