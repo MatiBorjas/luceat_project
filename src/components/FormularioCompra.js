@@ -31,7 +31,7 @@ function FormularioCompra() {
         title:'Gracias por tu compra',
         text: 'Te vamos a estar contactando para coordinar el envio y la forma de pago',
         icon:'success',
-        confirmButtonText: <a href='/'>Anotado</a>,
+        confirmButtonText: <a href='/'>Excelente!</a>,
         confirmButtonColor: "#e78848",
       });}
     );
